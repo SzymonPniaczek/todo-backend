@@ -18,6 +18,10 @@ app.post("/", async (req, res) => {
   res.json({ message: req.body });
 });
 
+app.get("/", async (req, res) => {
+  res.json({ message: "test" });
+});
+
 mongoose.connect(MONGO_LINK).then(() => {
   app.listen(PORT, () => {
     console.log(`app listen at port ${PORT}`);
